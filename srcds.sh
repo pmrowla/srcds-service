@@ -36,7 +36,7 @@ case "$1" in
 		echo "Starting $DESC:"
 		if [ -e $DIR ]; then
 			cd $DIR
-			su $SRCDS_USER -l -c "tmux new -d -s $NAME $DAEMON $PARAMS"
+			su $SRCDS_USER -l -c "tmux new -d -s $NAME '$DAEMON $PARAMS'"
             echo " ... done."
 		else
 			echo "No such directory: $DIR!"
